@@ -1,14 +1,19 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <h2>Test Api con Ionic</h2>
+    <ion-button expand="full" color="primary" (click)="ionViewDidLoad()">
+        Llenar desde la Api
+    </ion-button>
+    <ion-list>
+        <div *ngFor="let usuario of usuarios">
+            {{ usuario.id }} - {{ usuario.first_name }} - {{ usuario.last_name }}
+        </div>
+    </ion-list>
 </ion-content>
